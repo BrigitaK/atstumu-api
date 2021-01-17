@@ -28,9 +28,9 @@ if(!empty($_POST)){
 
         $answer = json_decode($answer);
 
-        $DATA->set($answer); // <---- uzkesinam naujus duomenis
+        //$DATA->set($answer); // <---- uzkesinam naujus duomenis
 
-        //$dist = $answer->distance;
+        $dist = $answer->distance;
 
     }
     //api end
