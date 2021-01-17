@@ -57,22 +57,25 @@ if(isset($_SESSION['distance'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./layout.css" />
     <title>API</title>
 </head>
 <body>
-<h1>Atstumų API</h1>
+<h1 class="title">Atstumai tarp miestų</h1>
     <form action="" method="post">
-    
-    <input type="text" name="m1" value="<?= $town1 ?? ''?>">
-    <input type="text" name="m2" value="<?= $town2 ?? ''?>">
+    <div class="par">Įveskite miestus, tarp kurių atstumą norėtumėte sužinoti:</div>
+    <div class="input">
+        <input class="in" type="text" name="m1" value="<?= $town1 ?? ''?>">
+        <input class="in" type="text" name="m2" value="<?= $town2 ?? ''?>">
+    </div>
 
-    <button type="submit">Gauti atstumą</button>
+    <button class="ans" type="submit">Gauti atstumą</button>
     </form>
 
     <?php if(isset($dist)) {?>
     <h2>Atstumas yra: <?= $dist?> km.</h2>
-    <img style="height: 300px;" src="<?= $img1 ?? ''?>" alt="">
-    <img style="height: 300px;" src="<?= $img2 ?? '' ?>" alt="">
+    <img style="width: 280px; max-height: 300px; margin-bottom:20px;" src="<?= $img1 ?? ''?>" alt="">
+    <img style="width: 280px;max-height: 300px; margin-bottom:20px;" src="<?= $img2 ?? '' ?>" alt="">
     <?php } ?>
 </body>
 </html>
